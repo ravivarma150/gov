@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>LOGIN</title>
+<style>
+body {
+background-color: 5D534A;
+}
+h3 {
+color: maroon;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h3 style="color:FFF5DA;font-size:200%;">User Login</h3>
+<form action="/user_login/" method="post">
+{% csrf_token %}
+<table align="center" heigth="20%">
+<tr>
+<td align="right" style="color:FFF5DA;font-size:200%;">User Name:</td>
+<td align="left"> <input type="text" maxlength="30" size="20" name="username"></td>
+</tr>
+<tr>
+<td align="right" style="color:FFF5DA;font-size:200%;">Password:</td>
+<td align="left"><input type="password" maxlength="30" size="20" name="password"></td>
+</tr>
+<tr>
+<td></td>
+<td style="font-size:120%;"><a href="/register/">New User Clik
+here</font></a></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><input type="SUBMIT" value="SUBMIT"></td>
+</form>
+<td align="left"><input type="RESET" value="RESET"> </td>
+</tr>
+</table>
+</body>
+</html>

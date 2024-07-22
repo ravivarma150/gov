@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>feedback</title>
+<style>
+body {
+background-color: 5D534A;text-align:center;
+}
+h2 {
+color: maroon;
+text-align: center;
+}
+</style>
+</head>
+<h2 style="color:FFF5DA;font-size:200%;">User Feedback</h2>
+<form action="/feedback/" method="post">
+    {% csrf_token %}
+  <label style="color:FFF5DA;font-size:150%;">Rating(1-5):</label>
+  <input type="text" id="fname" name="rating"><br>
+  <label style="color:FFF5DA;font-size:150%;">Details-Details of your compliment,suggested improvement or feedback:</label>
+  <textarea rows="6" cols="100" name="suggested"> </textarea><br><br>
+  <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>help</title>
+<style>
+body {
+background-color: 5D534A;
+}
+h3 {
+color: maroon;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h3 style="color:FFF5DA;font-size:200%;">Enter the details of schemes you are missed or you are unable to apply for it</h3>
+
+<form class="" action="/help/" method="post">
+    {% csrf_token %}
+
+<table align="center" heigth="20%">
+<tr>
+
+<td align="right" style="color:FFF5DA;font-size:150%;">Name of the scheme:</td>
+<td align="left"> <input type="text" maxlength="50" size="20" name="name_of_scheme"></td>
+</tr>
+<tr>
+<td align="right" style="color:FFF5DA;font-size:150%;">Report a Problem:</td>
+<td align="left"><textarea rows="6" cols="20" name="add" name="report_problem"></textarea></td>
+</tr>
+<tr>
+
+<td></td>
+
+<td align="left"><input type="SUBMIT" value="SUBMIT"></td>
+<td align="left"><input type="reset" name="reset">
+
+</tr>
+<tr>
+<td></td>
+<td style="color:FFF5DA;font-size:120%;"><a href="/">Click here to go home</a></td>
+</tr>
+</table>
+</body>
+</html>

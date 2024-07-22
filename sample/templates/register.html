@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .col-sm-9 {
+    }
+  </style>
+
+  <div class="row">
+    <div class="col-sm-3" style="background-color: red; height:100vh ">
+
+
+        <h1 align="center"><font color="FFF5DA">GovConnect</font></h1>
+        <table cellspacing="1" cellpadding="1" align="center" width="70%" border="1" style="width:100%">
+
+        <tr style="height:30px">
+        <td align="center"><a href ="/" target ="sub_frame" required><font color="FFF5DA">Home</font></a></td>
+        </tr>
+        <tr style="height:30px">
+            <td align="center"><a href ="/user_login" target ="sub_frame" required><font color="FFF5DA">Login</font></a></td>
+            </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="/register/" target ="sub_frame" required><font color="FFF5DA">Regitration</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="catalogue.html" target ="sub_frame" required><font color="FFF5DA">Schemes To Register</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="help.html" target ="sub_frame" required><font color="FFF5DA">Help</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="feedback.html" target ="sub_frame" required><font color="FFF5DA">Feedback</font></a></td>
+        </tr>
+        </table>
+
+
+    </div>
+
+    <div class="col-sm-9" style="background-color:#976933; height: 100vh;" >
+      <!-- Content for the second column goes here -->
+  <form action="/register/" method="post">{% csrf_token %}
+        <h2 align="center" style="color:FFF5DA;">ONLINE REGISTRATION</h2>
+        <table align="center" cellspacing="12">
+        <tr>
+        <td align="right" style="color:FFF5DA;">First name:</td>
+        <td align="left"><input type="text" maxlength="40" size="35" name="first_name" required>
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Last name:</td>
+        <td align="left"><input type="text" maxlength="40" size="35" name="last_name" required>
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">PassWord:</td>
+        <td align="left"><input type="PassWord" maxlength="40" size="35" name="password" required>
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Confirm PassWord</td>
+        <td align="left"><input type="PassWord" maxlength="40" size="35" name="confirm_password"required>
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Gender:</td>
+        <form>
+        <td style="color:FFF5DA;"><input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female</td>
+        </form>
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">DATE OF BIRTH:</td>
+        <td align=”right”><input type=”date” name="date_of_birth" required></td>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Adhar Number:</td>
+        <td align="left"><input type="text" maxlength="40" size="35" name="aadhar_number">
+        </tr>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Address:</font></td>
+        <td align="left"><textarea rows="6" cols="20" name="address" required> </textarea> </td>
+        <tr>
+        <td align="right" style="color:FFF5DA;">Phone no:</td>
+        <td align="left"><input type="text" maxlength="40" size="35" name="phone_number" required> </td>
+        </tr>
+        <tr>
+        <td></td>
+        <td align="left" style="color:FFF5DA;"><input type="checkbox" name="xx" value="yy">I Agree with terms and Conditions</td>
+        </tr>
+        <tr> <td></td>
+
+        <td align="left" style="color:FFF5DA;"> <button type="submit" name="register">register</button></td>
+        </form>
+        <td align="right" style="color:FFF5DA;"> <button type="reset" name="reset">reset</button></td>
+
+        </tr>
+        </table>
+
+    </div>
+  </div>
+</body>
+</html>

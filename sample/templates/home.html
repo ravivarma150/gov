@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .col-sm-9 {
+      background-image: url('{% static 'ph.jpg' %}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: #FFF5DA;
+      text-align: center;
+      height: 100vh; /* Set height to 100% of viewport height */
+    }
+  </style>
+
+  <div class="row">
+    <div class="col-sm-3" style="background-color: red; height:100vh ">
+
+
+        <h1 align="center"><font color="FFF5DA">GovConnect</font></h1>
+        <table cellspacing="1" cellpadding="1" align="center" width="70%" border="1" style="width:100%">
+
+        <tr style="height:30px">
+        <td align="center"><a href ="/" target ="sub_frame"><font color="FFF5DA">Home</font></a></td>
+        </tr>
+        <tr style="height:30px">
+            <td align="center"><a href ="/user_login/" target ="sub_frame"><font color="FFF5DA">Login</font></a></td>
+            </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="/register/" target ="sub_frame"><font color="FFF5DA">Regitration</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="/schems/" target ="sub_frame"><font color="FFF5DA">Schemes To Register</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="/help/" target ="sub_frame"><font color="FFF5DA">Help</font></a></td>
+        </tr>
+        <tr style="height:30px">
+        <td align="center"><a href ="/feedback/" target ="sub_frame"><font color="FFF5DA">Feedback</font></a></td>
+        </tr>
+        </table>
+
+
+    </div>
+
+    <div class="col-sm-9">
+      <!-- Content for the second column goes here -->
+      <h1><b>WELCOME</b></h1>
+      <h2>"GovConnect: Empowering Citizens with Government Schemes"</h2>
+    </div>
+  </div>
+</body>
+</html>
